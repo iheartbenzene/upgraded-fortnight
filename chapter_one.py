@@ -1,7 +1,8 @@
 import statistics
 from statistics import *
 
-
+import pymc
+import numpy as np
 
 def regression_analysis():
     pass
