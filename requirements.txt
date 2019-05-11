@@ -1,4 +1,9 @@
 pymc
+nose
+pydot
+pytables
+matplotlib
+ipython
 numpy
 scipy
 statistics
