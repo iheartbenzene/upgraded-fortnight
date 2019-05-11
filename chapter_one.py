@@ -10,9 +10,14 @@ def spearman():
 def one_sample():
     pass
 
+def two_sample():
+    pass
+
 def fmax():
     pass
 
 def bartlett():
     pass
 
+def chi_squared():
+    pass
