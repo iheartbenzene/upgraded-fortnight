@@ -4,7 +4,7 @@ def regression_analysis():
 def pearson_r():
     pass
 
-def spearman():
+def spearman_rank_correlation():
     pass
 
 def one_sample():
@@ -25,6 +25,17 @@ def chi_squared():
 def fischer_exact():
     pass
 
+def students_t():
+    pass
+
+def mann_whitney_u():
+    pass
+
+def wilcoxon():
+    pass
+
 def one_way_ANOVA():
     pass
 
+def kruskall_wallace():
+    pass
