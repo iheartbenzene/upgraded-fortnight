@@ -22,3 +22,9 @@ def bartlett():
 def chi_squared():
     pass
 
+def fischer_exact():
+    pass
+
+def one_way_ANOVA():
+    pass
+
