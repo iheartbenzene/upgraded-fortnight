@@ -7,7 +7,7 @@ Clone the repo via SSH:
 `git clone git@github.com:iheartbenzene/upgraded-fortnight.git`
 
 Clone the repo via HTTPS:
-`git clone`
+`git clone https://github.com/iheartbenzene/upgraded-fortnight.git`
 
 Statistics
 `git checkout statistical_rethinking`
