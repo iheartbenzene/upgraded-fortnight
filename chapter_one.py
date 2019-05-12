@@ -1,7 +1,3 @@
-import statistics
-from statistics import *
-
-import pymc
 import numpy as np
 
 import scipy
@@ -15,7 +11,6 @@ from scipy.stats import ttest_1samp
 from numpy import fmax
 from scipy.stats import bartlett
 
-from 
 from scipy.stats import mannwhitneyu, wilcoxon
 
 from scipy.stats import f_oneway
