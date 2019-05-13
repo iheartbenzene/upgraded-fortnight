@@ -16,13 +16,17 @@ vocabulary_index["<UNUSED>"] = 3
 
 reverse_vocabulary_index = dict([(value, key) for (key, value) in vocabulary_index.items()])
 
-def decode_review(text):
-    return " ".join([reverse_vocabulary_index.get(i, "?") for i in text])
-
 train_data = keras.preprocessing.sequence.pad_sequences(train_data, value=vocabulary_index["<PAD>"], padding="post", maxlen=256)
 test_data = keras.preprocessing.sequence.pad_sequences(test_data, value=vocabulary_index["<PAD>"], padding="post", maxlen=256)
 
+def decode_review(text):
+    return " ".join([reverse_vocabulary_index.get(i, "?") for i in text])
 
 # for i in range(5):
 #     print(decode_review(test_data[i]))
 
+model = keras.Sequential()
+model.add(keras.layers.Embedding(10000, 16))
+model.add(keras.layers.GlobalAveragePooling1D())
+model.add(keras.layers.Dense(16, activation="relu"))
+model.add(keras.layers.Dense(1, activation="sigmoid"))
