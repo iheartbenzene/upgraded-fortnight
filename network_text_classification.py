@@ -33,4 +33,15 @@ model.add(keras.layers.Dense(1, activation="sigmoid"))
 
 model.summary()
 
-model.compile(optimizer="adam", loss="binary_crossentropy")
+model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"])
+
+x_validation = train_data[:10000]
+x_train = train_data[10000:]
+y_validation = train_label[:10000]
+y_train = train_label[10000:]
+
+fit_model = model.fit(x_train, y_train, epochs=50, batch_size=512, validation_data=(x_validation, y_validation), verbose=1)
+
+result = model.evaluate(test_data, test_label)
+
+# print(result)
