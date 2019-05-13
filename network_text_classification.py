@@ -6,10 +6,13 @@ data = keras.datasets.imdb
 
 (train_data, train_label), (test_data, test_label) = data.load_data(num_words=80000)
 
-vocabulary = imdb.get_word_index()
+vocabulary_index = imdb.get_word_index()
 
-vocabulary = {key:(value = 3) for key, value in vocabulary.items()}
-vocabulary["<PAD>"] = 0
-vocabulary["<START>"] = 1
-vocabulary["<UNK>"] = 2
-vocabulary["<UNUSED>"] = 3
+vocabulary_index = {k:(v + 3) for k, v in vocabulary_index.items()}
+vocabulary_index["<PAD>"] = 0
+vocabulary_index["<START>"] = 1
+vocabulary_index["<UNK>"] = 2
+vocabulary_index["<UNUSED>"] = 3
+
+reverse_vocabulary_index = dict([(value, key) for (key, value) in vocabulary_index.item()])
+
