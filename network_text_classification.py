@@ -16,3 +16,6 @@ vocabulary_index["<UNUSED>"] = 3
 
 reverse_vocabulary_index = dict([(value, key) for (key, value) in vocabulary_index.item()])
 
+def decode_review(text):
+    return " ".join([reverse_vocabulary_index.get(i, "?") for i in text])
+
