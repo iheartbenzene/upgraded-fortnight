@@ -27,4 +27,4 @@ model.fit(train_image, train_labels, epochs=8)
 # print("tested accuracy: ", test_acc)
 
 predicted = model.predict(test_image)
-print(predicted)
+print(class_names[np.argmax(predicted)])
