@@ -20,7 +20,7 @@ text_model = keras.models.load_model("text_model.h5")
 def review_encoder(s):
     encoded = [1]
     for word in s:
-        if word in vocabulary_index:
+        if word.lower() in vocabulary_index:
             encoded.append(vocabulary_index[word])
         else:
             encoded.append(2)
