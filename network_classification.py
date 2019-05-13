@@ -30,9 +30,10 @@ predicted = model.predict(test_image)
 
 # To ensure that it doesn't run through everything.
 # Could put into a function later.
-for i in range(5):
-    plt.grid(False)
-    plt.imshow(test_image[i], cmap=plt.cm.binary)
-    plt.xlabel("Actual: ", class_names[test_labels[i]])
-    plt.title("Prediction: ", class_names[np.argmax(predicted[i])])
+# for i in range(5):
+#     plt.grid(False)
+#     plt.imshow(test_image[i], cmap=plt.cm.binary)
+#     plt.xlabel("Actual: ", class_names[test_labels[i]])
+#     plt.title("Prediction: ", class_names[np.argmax(predicted[i])])
 
+model.save("image_model.h5")
