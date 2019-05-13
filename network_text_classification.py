@@ -4,7 +4,7 @@ import numpy as np
 
 data = keras.datasets.imdb
 
-(train_data, train_label), (test_data, test_label) = data.load_data(num_words=80000)
+(train_data, train_label), (test_data, test_label) = data.load_data(num_words=10000)
 
 vocabulary_index = data.get_word_index()
 
@@ -32,3 +32,5 @@ model.add(keras.layers.Dense(16, activation="relu"))
 model.add(keras.layers.Dense(1, activation="sigmoid"))
 
 model.summary()
+
+model.compile(optimizer="adam", loss="binary_crossentropy")
