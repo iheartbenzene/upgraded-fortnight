@@ -24,6 +24,7 @@ def review_encoder(s):
             encoded.append(vocabulary_index[word])
         else:
             encoded.append(2)
+    return encoded
 
 # coming from a text file
 with open(" ", encoding="utf-8") as f:
