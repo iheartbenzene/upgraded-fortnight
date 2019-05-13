@@ -45,3 +45,5 @@ fit_model = model.fit(x_train, y_train, epochs=50, batch_size=512, validation_da
 result = model.evaluate(test_data, test_label)
 
 # print(result)
+
+prediction = model.predict([test_data])
