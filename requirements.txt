@@ -7,3 +7,5 @@ ipython
 numpy
 scipy
 statistics
+tensorflow
+keras
