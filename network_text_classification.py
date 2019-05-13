@@ -19,7 +19,10 @@ reverse_vocabulary_index = dict([(value, key) for (key, value) in vocabulary_ind
 def decode_review(text):
     return " ".join([reverse_vocabulary_index.get(i, "?") for i in text])
 
+train_data = keras.preprocessing.sequence.pad_sequences(train_data, value=vocabulary_index["<PAD>"], padding="post", maxlen=256)
+test_data = keras.preprocessing.sequence.pad_sequences(test_data, value=vocabulary_index["<PAD>"], padding="post", maxlen=256)
 
-for i in range(5):
-    print(decode_review(test_data[i]))
+
+# for i in range(5):
+#     print(decode_review(test_data[i]))
 
