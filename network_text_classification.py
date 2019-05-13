@@ -20,3 +20,4 @@ def decode_review(text):
     return " ".join([reverse_vocabulary_index.get(i, "?") for i in text])
 
 # print(decode_review(test_data[0]))
+
