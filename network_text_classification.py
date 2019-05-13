@@ -6,7 +6,7 @@ data = keras.datasets.imdb
 
 (train_data, train_label), (test_data, test_label) = data.load_data(num_words=80000)
 
-vocabulary_index = imdb.get_word_index()
+vocabulary_index = data.get_word_index()
 
 vocabulary_index = {k:(v + 3) for k, v in vocabulary_index.items()}
 vocabulary_index["<PAD>"] = 0
