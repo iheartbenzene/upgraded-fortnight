@@ -19,3 +19,4 @@ reverse_vocabulary_index = dict([(value, key) for (key, value) in vocabulary_ind
 def decode_review(text):
     return " ".join([reverse_vocabulary_index.get(i, "?") for i in text])
 
+# print(decode_review(test_data[0]))
