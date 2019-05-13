@@ -46,6 +46,8 @@ result = model.evaluate(test_data, test_label)
 
 model.save("text_model.h5")
 
+
+
 # print(result)
 
 # prediction = model.predict([test_data])
