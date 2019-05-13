@@ -26,7 +26,7 @@ def decode_review(text):
 #     print(decode_review(test_data[i]))
 
 model = keras.Sequential()
-model.add(keras.layers.Embedding(10000, 16))
+model.add(keras.layers.Embedding(100000, 16)) 
 model.add(keras.layers.GlobalAveragePooling1D())
 model.add(keras.layers.Dense(16, activation="relu"))
 model.add(keras.layers.Dense(1, activation="sigmoid"))
@@ -44,6 +44,8 @@ fit_model = model.fit(x_train, y_train, epochs=50, batch_size=512, validation_da
 
 result = model.evaluate(test_data, test_label)
 
+model.save("text_model.h5")
+
 # print(result)
 
-prediction = model.predict([test_data])
+# prediction = model.predict([test_data])
