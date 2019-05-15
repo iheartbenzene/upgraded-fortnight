@@ -31,15 +31,15 @@ int main(void){
 
 int displayPrimeNumbers(int r)
 {
-    int j, flag = 1;
+    int j, count = 1;
 
     for(j = 2; j <= r/2; ++j){
         if(r%j == 0){
-            flag = 0;
+            count = 0;
             break;
         }
     }
-    return flag;
+    return count;
 }
 
 unsigned long factorial(int n)
