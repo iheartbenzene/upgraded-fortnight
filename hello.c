@@ -2,8 +2,11 @@
 #include <math.h>
 
 int displayPrimeNumbers();
+unsigned long factorial();
+long fibonacci();
+
 int main(){
-    printf("This is a test.");
+    printf("This is a test. \r\n");
 
     // int r1, r2, k, flag;
     // printf("Enter two whole numbers:");
@@ -19,10 +22,15 @@ int main(){
     //     }
     // }
     // return 0;
+    int n = 3;
+    printf("%d factorial is: %d", n, factorial(n));
 
+    int m = 5;
+    printf("The %d Fibonacci number is: %d", m, fibonacci(m));
 }
 
-int displayPrimeNumbers(int r){
+int displayPrimeNumbers(int r)
+{
     int j, flag = 1;
 
     for(j = 2; j <= r/2; ++j){
@@ -32,4 +40,33 @@ int displayPrimeNumbers(int r){
         }
     }
     return flag;
+}
+
+unsigned long factorial(int n)
+{
+    if (n <= 1) 
+    {
+        return 1;
+    }
+    else if (n > 1)
+    {
+        return n * factorial(n-1);
+    }
+}
+
+long fibonacci(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    else if (n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return fibonacci(n-1) + fibonacci(n+1);  
+    }
+    
 }
