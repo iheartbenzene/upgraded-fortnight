@@ -30,6 +30,7 @@ int main(void){
 
     // int m = 5;
     // printf("The %d Fibonacci number is: %d", m, fibonacci(m));
+    printf('%d', fibonacci(3))
 }
 
 int displayPrimeNumbers(int r)
