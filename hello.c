@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
+#include <time.h>
 
 int displayPrimeNumbers();
 unsigned long factorial();
-long fibonacci();
+unsigned long fibonacci();
 
-int main(){
+int main(void){
     printf("This is a test. \r\n");
 
     // int r1, r2, k, flag;
@@ -22,11 +24,12 @@ int main(){
     //     }
     // }
     // return 0;
+
     int n = 3;
     printf("%d factorial is: %d", n, factorial(n));
 
-    int m = 5;
-    printf("The %d Fibonacci number is: %d", m, fibonacci(m));
+    // int m = 5;
+    // printf("The %d Fibonacci number is: %d", m, fibonacci(m));
 }
 
 int displayPrimeNumbers(int r)
@@ -54,19 +57,17 @@ unsigned long factorial(int n)
     }
 }
 
-long fibonacci(int n)
+unsigned long fibonacci(int m)
 {
-    if (n == 0)
+    if (m == 0)
     {
         return 0;
     }
-    else if (n == 1)
+    else if (m == 1)
     {
         return 1;
     }
-    else
-    {
-        return fibonacci(n-1) + fibonacci(n+1);  
-    }
+
+    return fibonacci(m-1) + fibonacci(m+1);
     
 }
