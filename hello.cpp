@@ -5,7 +5,6 @@
 
 int displayPrimeNumbers();
 unsigned long factorial(int n);
-unsigned long fibonacci(int m);
 
 int main(void){
     printf("This is a test. \r\n");
@@ -28,9 +27,6 @@ int main(void){
     int n = 3;
     printf("%d factorial is: %d", n, factorial(n));
 
-    // int m = 5;
-    // printf("The %d Fibonacci number is: %d", m, fibonacci(m));
-    // printf("%d", (fibonacci(3)))
 }
 
 int displayPrimeNumbers(int r)
@@ -58,17 +54,4 @@ unsigned long factorial(int n)
     }
 }
 
-unsigned long fibonacci(int m)
-{
-    if (m == 0)
-    {
-        return 0;
-    }
-    else if (m == 1)
-    {
-        return 1;
-    }
-
-    return fibonacci(m-1) + fibonacci(m+1);
-    
-}
+// START HERE
