@@ -1,5 +1,6 @@
-#include <stdio.h>
+#include <iostream>
 #include <math.h>
+#include <vector>
 #include <stdlib.h>
 #include <time.h>
 
